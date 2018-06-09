@@ -1,7 +1,7 @@
 package com.testops.liudao.ecshop.pages;
 
-//import static org.testng.Assert.assertEquals;
-//import static org.testng.Assert.fail;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.fail;
 
 import java.util.List;
 
@@ -33,7 +33,7 @@ public class EcshopRegisterPage {
 	@FindBy(id="password1")
 	private WebElement password_ipt;
 	
-	@FindBy(id="confirm_password")
+	@FindBy(id="conform_password")
 	private WebElement confirm_password_ipt;
 	
 	@FindBy(name="extend_field2")
@@ -112,7 +112,7 @@ public class EcshopRegisterPage {
 		register_btn.click();
 	}
 	
-/*	public void assertAlertText(String expectedMsg) {
+	public void assertAlertText(String expectedMsg) {
 		Alert alert = new WebDriverWait(driver, 5L).until(ExpectedConditions.alertIsPresent());
 		if(alert == null) {
 			fail("并未弹出警告框");
@@ -126,7 +126,7 @@ public class EcshopRegisterPage {
 	public void assertRegisterResult(String expectedMsg) {
 		String actualMsg = result_p.getText();
 		assertEquals(actualMsg, expectedMsg);
-	}*/
+	}
 	
 	private void fireOnBlur(WebElement element) {
 		element.findElement(By.xpath("../../td[1]")).click();

@@ -48,7 +48,7 @@ public class DriverUtils {
 				service = builder.build();
 				serviceMap.put("chrome", service);
 			}
-			return new ChromeDriver((ChromeDriverService) service, options);
+			return new LoggerChromeDriver((ChromeDriverService) service, options);
 		}else if("firefox".equalsIgnoreCase(browserName)) {
 			FirefoxOptions options = new FirefoxOptions();
 			service = serviceMap.get("firefox");

@@ -4,3 +4,7 @@ target
 .idea
 .settings
 *.iml
+log
+logs
+test-output
+screenShots
