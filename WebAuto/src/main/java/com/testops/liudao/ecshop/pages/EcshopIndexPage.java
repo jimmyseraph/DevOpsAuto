@@ -19,7 +19,9 @@ public class EcshopIndexPage {
 	public void click_login_link() {
 		login_link.click();
 	}
-	
+	/**
+	* 点击注册按钮
+	*/
 	public void click_register_link() {
 		register_link.click();
 	}
