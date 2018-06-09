@@ -4,7 +4,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
+/**
+ * ECshop登录页面对象
+ * @author liudao
+ *
+ */
 public class EcshopIndexPage {
 	@FindBy(linkText = "请登录 ")
 	private WebElement login_link;
