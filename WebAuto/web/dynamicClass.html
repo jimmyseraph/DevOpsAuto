@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>class动态变化</title>
+<style type="text/css">
+	.books{
+		color:blue;
+	}
+	.selected{
+		color:red;
+	}
+</style>
+<script type="text/javascript">
+	window.onload = function(){
+		
+		var books = document.getElementsByTagName("li");
+		for(i = 0; i < books.length; i++){
+			books[i].onmouseover = function(){
+				this.className = "selected";
+			};
+			books[i].onmouseout = function(){
+				this.className = "books";			
+			};
+		}
+		
+	} 
+	
+</script>
+</head>
+<body>
+	<ul>
+		<li class="books">天龙八部</li>
+		<li class="books">神雕侠侣</li>
+		<li class="books">射雕英雄</li>
+		<li class="books">倚天屠龙</li>
+	</ul>
+</body>
+</html>

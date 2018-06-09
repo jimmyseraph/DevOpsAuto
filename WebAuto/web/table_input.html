@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>表格输入</title>
+<style type="text/css">
+	td,th {
+		padding: 5px;
+	}
+	.input{
+		width: 100px;
+	}
+	input{
+		display: none;
+	}
+</style>
+<script type="text/javascript">
+	window.onload = function(){
+		var inputs = document.getElementsByClassName("input");
+		for(i = 0; i < inputs.length; i++){
+			inputs[i].onclick = function(){
+				label = this.getElementsByTagName("label")[0];
+				var input = this.getElementsByTagName("input")[0];
+				var originValue = label.innerText;
+				label.innerText = "";
+				input.style.display = "block";
+				input.value = originValue;
+				input.focus();
+				input.onblur = function(){
+					var newValue = this.value;
+					this.value = "";
+					this.style.display = "none";
+					label.innerText = newValue;
+				};
+			};
+		}
+	} 
+	
+</script>
+</head>
+<body>
+	<table border="1" style="padding: 2px 4px 2px 4px;">
+		<caption>个人信息表</caption>
+		<tr>
+			<th>姓名</th>
+			<td class="input">
+				<label id="name"></label>
+				<input type="text" name="username" />
+			</td>
+		</tr>
+		<tr>
+			<th>年龄</th>
+			<td class="input">
+				<label id="age"></label>
+				<input type="text" name="age" />
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

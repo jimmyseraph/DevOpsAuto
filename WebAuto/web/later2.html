@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>延时显示</title>
+<style type="text/css">
+	p {
+		height: 100px;
+		width: 200px;
+		border: solid 1px blue;
+	}
+	button {
+		display: block;
+		width: 50px;
+		height: 30px;
+		margin: auto; 
+		
+	}
+</style>
+<script type="text/javascript">
+	window.onload = function(){
+		setTimeout("show_button();",3000);
+	} 
+	function show_button(){
+		var p_node = document.getElementsByTagName('p')[0];
+		var button_node = document.createElement("button");
+		var attr_node = document.createAttribute("onclick");
+		attr_node.value = "alert('你好')";
+		var text_node = document.createTextNode("点我");
+		button_node.setAttributeNode(attr_node);
+		button_node.appendChild(text_node);
+		p_node.appendChild(button_node);
+	}
+</script>
+</head>
+<body>
+	<div>下面的一个按钮会在3秒后出现</div>
+	<p></p>
+</body>
+</html>

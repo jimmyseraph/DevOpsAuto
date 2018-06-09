@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>延时显示</title>
+<style type="text/css">
+	p {
+		display:none;
+		height: 100px;
+		width: 200px;
+		border: solid 1px blue;
+	}
+	button {
+		display: block;
+		width: 50px;
+		height: 30px;
+		margin: auto; 
+		
+	}
+</style>
+<script type="text/javascript">
+	window.onload = function(){
+		setTimeout("document.getElementsByTagName('p')[0].style.display=\"block\";",3000);
+	} 
+	
+</script>
+</head>
+<body>
+	<div>下面的一个按钮会在3秒后出现</div>
+	<p>
+		<button onclick="alert('你好')">点我</button>
+	</p>
+</body>
+</html>
